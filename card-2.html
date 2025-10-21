@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+}
+body {
+    background-color: #f3f2f3;
+}
+h1 {
+    text-align: center;
+    padding-bottom: 10px;
+    margin: 30px auto;
+}
+.container {
+    display: flex;
+    gap: 1.2em;
+    justify-content: center;
+}
+.network {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.network-2 {
+    display: flex;
+        gap: 5px;
+
+}
+input {
+    padding: 10px 70px;
+}
+p {
+    margin-top: 10px;
+}
+.recharge-button {
+    padding: 10px 30px;
+    background-color: rgba(0, 0, 255, 0.824);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.para {
+    text-align: center;
+}
+.amount-2 {
+    margin-bottom: 200px;
+    border: 2px solid green;
+}
+.amount {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+.select-div {
+    margin-top: 10px;
+}
+.code {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.para-2 {
+    margin-top: 18px;
+}
+.generate {
+    padding: 20px 8px;
+    background-color: rgb(45, 163, 45);
+    border: none;
+    cursor: pointer;
+}
+
+ table {
+    margin: 20px auto;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    /* background-color: #e50914; */
+    background-color: white;
+    color: black;
+  }
+
+  tr:hover {
+    background-color: #f2f2f2;
+  }
+ 
+    </style>
+  </head>
+  <body>
+    <h1>Recharge Card Generator</h1>
+    <div class="container">
+      <div class="network">
+        <p>Select Network:</p>
+        <select name="network" id="select">
+          <option value="mtn">MTN</option>
+          <option value="glo">GLO</option>
+          <option value="airtel">AIRTEL</option>
+          <option value="9mobile">9MOBILE</option>
+        </select>
+      </div>
+      <div class="network-2">
+        <p>Enter pin:</p>
+        <input type="text" name="pin" id="rechargeInput" />
+      </div>
+      <button class="recharge-button" onclick="rechargeCard()">Recharge</button>
+    </div>
+    <div class="amount">
+      <p class="para">Amount:</p>
+      <label for="">
+        <select name="network" id="" class="select-div">
+          <option value="#100">#100</option>
+          <option value="#200">#200</option>
+          <option value="#500">#500</option>
+          <option value="#1000">#1000</option>
+          <option value="#2000">#2000</option>
+        </select>
+      </label>
+    </div>
+    <div class="code">
+      <p class="para-2">Code:</p>
+      <input type="text" name="pin" id="codeInp" />
+      <button class="generate" onclick="generateCode()">Generate</button>
+      <button class="generate" onclick="savePin()">Save Pin</button>
+    </div>
+    <table border="1" id="pin-table">
+      <thead>
+        <tr>
+          <th>S/N</th>
+          <th>Network Operator</th>
+          <th>Amount</th>
+          <th>Pin</th>
+          <th>Status</th>
+          <th>Date Created</th>
+          <th>Date Used</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <script src="./card-2.js"></script>
+  </body>
+</html>

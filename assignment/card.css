@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+}
+body {
+    background-color: #eae8e8;
+}
+h1 {
+    text-align: center;
+    padding-bottom: 10px;
+    margin: 30px auto;
+}
+.container {
+    display: flex;
+    gap: 1.2em;
+    justify-content: center;
+}
+.network {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.network-2 {
+    display: flex;
+        gap: 5px;
+
+}
+input {
+    padding: 10px 70px;
+}
+p {
+    margin-top: 10px;
+}
+.recharge-button {
+    padding: 10px 30px;
+    background-color: rgba(0, 0, 255, 0.824);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.para {
+    text-align: center;
+}
+.amount-2 {
+    margin-bottom: 200px;
+    border: 2px solid green;
+}
+.amount {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+.select-div {
+    margin-top: 10px;
+}
+.code {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.para-2 {
+    margin-top: 18px;
+}
+.generate {
+    padding: 20px 8px;
+    background-color: rgb(45, 163, 45);
+    border: none;
+    cursor: pointer;
+}
+
+ table {
+    margin: 20px auto;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    /* background-color: #e50914; */
+    background-color: white;
+    color: black;
+  }
+
+  tr:hover {
+    background-color: #f2f2f2;
+  }
+ 

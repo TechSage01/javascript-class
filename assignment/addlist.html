@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f8f9ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: blue;
+            font-family: cursive;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+        }
+
+        .add {
+            display: flex;
+            gap: 10px;
+            /* margin-bottom: 10px; */
+        }
+
+        input {
+            border: 2px solid #007bff;
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #0056b3;
+            box-shadow: 0 0 5px rgba(0, 86, 179, 0.4);
+        }
+
+        .btn {
+            padding: 10px 25px;
+            background-color: blue;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        #message {
+            color: red;
+            font-weight: bold;
+            /* margin-top: 10px; */
+        }
+
+        table {
+            width: 400px;
+            border-radius: 10px;
+            background-color: #f8f9ff;;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            /* margin-top: 15px; */
+        }
+
+        th, td {
+            text-align: center;
+        }
+
+        thead {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tbody tr:hover {
+            background-color: #e9f1ff;
+            transition: 0.3s ease;
+        }
+
+        button {
+            cursor: pointer;
+        }
+</style>
+
+</head>
+<body>
+    <h1>addlist:</h1>
+    <div class="add">
+        <input type="text" id="nameInput">
+        <button onclick="addName()" class="btn">add</button>
+    </div>
+    <p id="message" style="color: red; font-weight: bold;"></p>
+
+    <table id="nameTable" style="display: none; border: none; width: 400px;" >
+        <th>
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+        </th>
+        <tbody id="tableBody"></tbody>
+
+    </table>
+    <script src="./addlist.js"></script>
+</body>
+</html>

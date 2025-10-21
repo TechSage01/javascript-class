@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+    body {
+      background-color: lightcyan;
+    }
+    .div-1 {
+        border: 2px solid black;
+      background-color: white;
+      
+      width: 80%;
+      margin: auto;
+      border: thin solid black;
+      padding-top: 40px;
+      border-radius: 16px;
+      /* text-align: center; */
+      padding-bottom: 30px;
+    }
+    .div-2 {
+     gap: 10px;
+      display: flex;
+      
+      /* margin-bottom: 200px; */
+    }
+    .div-1 input {
+      border: 2px solid black;
+      /* padding-left: 20px; */
+      margin-left: 20px;
+      border-radius: 5px;
+    }
+    p {
+      border-radius: 10px;
+      border-radius: #000000;
+    }
+    button {
+      padding: 5px 30px;
+      border-radius: 5px;
+    }
+    .div-1 a {
+      padding: 4px 80px;
+      border: 2px solid black;
+      background-color: #f2f5f9;
+      border-radius: 5px;
+    }
+    .p-2 {
+        margin-left: 30px;
+    }
+
+  </style>
+  <body id="body">
+    <button onclick="changeUI()" id="btn">click</button>
+
+    <div class="div-1" style="margin-top: 80px">
+      <div class="div-2">
+        <input type="text" id="inp1" class="clear1" />
+        <select name="" id="operator">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="x">x</option>
+          <option value="÷">÷</option>
+          <option value="%">%</option>
+        </select>
+        <!-- <input type="text" id="operator" /> -->
+        <input type="text" id="inp2" class="clear2" />
+        <button onclick="canCalculate();" style="background-color: #f2f5f9">
+          submit
+        </button>
+        <input type="text" id="answer">
+      </div>
+      <p id="currentValue" style="margin-left: 20px;"></p>
+    </div>
+
+    <script src="./as2.js"></script>
+  </body>
+</html>
