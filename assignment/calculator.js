@@ -6,12 +6,17 @@ let firstValue = '';
 
 function append (value){
     firstDisplay.value += value;
-    // secondDisplay.value += value;
+}
+
+function operator(operators){
+    oper = operators;
+    firstValue = Number(firstDisplay.value); 
+    secondDisplay.value = firstValue + operators;
+    firstDisplay.value = '';
 }
 
 function deleteLast() {
   firstDisplay.value = firstDisplay.value.slice(0, -1);
-  secondDisplay.value = secondDisplay.value.slice(0, -1);
 }
 function clearDisplays(){
     firstDisplay.value = '';
@@ -21,14 +26,6 @@ function clearDisplays(){
 }
 function clearinputDisplay() {
     firstDisplay.value = '';    
-}
-
-
-function operator(operators){
-    oper = operators;
-    firstValue = Number(firstDisplay.value); 
-    secondDisplay.value = firstDisplay.value + operators;
-    firstDisplay.value = '';
 }
 
 function canCalculate(){

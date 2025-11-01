@@ -40,9 +40,9 @@
     </div>
 
     <!-- display -->
-    <div class="calc-display">
-        <input type="text" class="input-display" id="display2" disabled>
-        <input type="text" class="output-display" id="display" disabled>
+    <div class="calc-display" >
+        <input type="text" style="text-align: end;" class="input-display" id="display2" disabled>
+        <input type="text" style="text-align: end;" class="output-display" id="display" disabled placeholder="0">
     </div>
 
     <!-- memory row (6 items, as in image) -->
@@ -66,7 +66,7 @@
 
       <div class="row">
         <button class="light" onclick="operator('1/')">1/x</button>
-        <button class="light" onclick="operator('x²')">x²></button>
+        <button class="light" onclick="operator('²')">x²</button>
         <button class="light" onclick="operator('√')">√x</button>
         <button class="op" onclick="operator('÷')">÷</button>
       </div>

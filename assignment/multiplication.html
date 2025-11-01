@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(230, 196, 152);
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2 {
+            margin-left: 50px;
+        }
+
+        .input {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 8px 30px;
+            background-color: rgba(0, 0, 255, 0.874);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-left: 50px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: fit-content;
+        }
+        #multi {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            /* width: 100%; */
+        }
+    </style>
+</head>
+    <h1 style="margin-left: 50px; margin-top: 30px;">Multiplication Table Generator</h1>
+    <h2 style="margin-left: 50px; padding-bottom: 30px;">Generate a Multiplication Table </h2>
+    <div class="input">
+        <label for="" style="margin-left: 20px;">From:
+            <input type="text" style="padding: 6px 40px;" id="inp1">
+
+        </label>
+        <label for="" style="margin-left: 20px;" >To: 
+            <input type="text" style="padding: 6px 40px;" id="inp2">
+
+        </label>
+        <button onclick="generate()" style="padding: 8px 30px; background-color: rgba(0, 0, 255, 0.874); color: white; border: none;">Generate</button>
+        <div id="multi" style=" display: flex; margin: 30px; font-size: 18px;"></div>
+
+    </div>
+<body>
+    <script src="./multiplication.js"></script>
+    
+</body>
+</html>

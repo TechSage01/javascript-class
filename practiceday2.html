@@ -1,11 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculator</title>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="calculator.css" />
+</head>  
 <body>
-    <script src="./practiceday2.js"></script>
+  <div class="calculator">
+    <div class="calc-header">
+      <div class="header-left">
+        <i class="fa-solid fa-calculator" aria-hidden="true"></i>
+        <span class="title">calculator</span>
+      </div>
+
+      <div class="header-right">
+        <i class="fa-solid fa-minus" title="Resize"></i>
+        <i class="fa-regular fa-window-maximize" title="Help"></i>
+        <i class="fa-solid fa-xmark" title="Maximize"></i>
+      </div>
+    </div>
+
+    <!-- mode row -->
+    <div class="calc-mode">
+      <div class="mode-left">
+        <i class="fa-solid fa-bars header-icon" aria-hidden="true"></i>
+
+        <strong>Standard</strong>
+        <i class="fa-solid fa-maximize"></i>
+      </div>
+      <div class="mode-right">
+        <i class="fa-solid fa-gear" title="Settings"></i>
+      </div>
+    </div>
+
+    <!-- display -->
+    <div class="calc-display">
+        <input type="text" class="input-display" id="display2" disabled>
+        <input type="text" class="output-display" id="display" disabled>
+    </div>
+
+    <!-- memory row (6 items, as in image) -->
+    <div class="memory-row">
+      <button class="mem">MC</button>
+      <button class="mem">MR</button>
+      <button class="mem">M+</button>
+      <button class="mem">M-</button>
+      <button class="mem">MS</button>
+      <button class="mem">M-</button>
+    </div>
+
+    <!-- main keypad -->
+    <div class="calc-buttons">
+      <div class="row">
+        <button class="light" onclick="operator('%')">%</button>
+        <button class="light" onclick="clearDisplays()">CE</button>
+        <button class="light" onclick="clearinputDisplay()">C</button>
+        <button class="light" onclick="deleteLast()"><i class="fa-solid fa-backspace"></i></button>
+      </div>
+
+      <div class="row">
+        <button class="light" onclick="operator('1/')">1/x</button>
+        <button class="light" onclick="operator('x²')">x²></button>
+        <button class="light" onclick="operator('√')">√x</button>
+        <button class="op" onclick="operator('÷')">÷</button>
+      </div>
+
+      <div class="row">
+        <button class="digit" onclick="append('7')">7</button>
+        <button class="digit" onclick="append('8')">8</button>
+        <button class="digit"onclick="append('9')">9</button>
+        <button class="op" onclick="operator('x')">×</button>
+      </div>
+
+      <div class="row">
+        <button class="digit" onclick="append('4')">4</button>
+        <button class="digit" onclick="append('5')">5</button>
+        <button class="digit" onclick="append('6')">6</button>
+        <button class="op" onclick="operator('-')">−</button>
+      </div>
+
+      <div class="row">
+        <button class="digit" onclick="append('1')">1</button>
+        <button class="digit" onclick="append('2')">2</button>
+        <button class="digit" onclick="append('3')">3</button>
+        <button class="op" onclick="operator('+')">+</button>
+      </div>
+
+      <div class="row">
+        <button class="light" onclick="operator('±')">±</button>
+        <button class="digit" onclick="append('0')">0</button>
+        <button class="light" onclick="append('.')">.</button>
+        <button class="equals" onclick="canCalculate()">=</button>
+      </div>
+    </div>
+  </div>
 </body>
+<script src="./practiceday2.js"></script>
 </html>

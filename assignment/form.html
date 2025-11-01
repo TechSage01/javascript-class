@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In & Sign Up</title>
+  <link rel="stylesheet" href="./form.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 🔹 Sign Up Form -->
+    <form action="#" class="form active" id="signupForm">
+      <h1>Sign Up</h1>
+
+      <div class="input-group">
+        <input type="text" placeholder="Firstname" required id="firstname">
+        <input type="text" placeholder="Surname" required id="surname">
+        <input type="email" placeholder="Email (e.g. testdev@gmail.com)" required id="email">
+        <input type="password" placeholder="Password" required id="password">
+        <input type="password" placeholder="Confirm Password" required id="confirm-password">
+      </div>
+
+      <div class="terms">
+        <input type="checkbox" id="terms" required>
+        <label for="terms">I agree to the terms and conditions</label>
+      </div>
+
+      <button type="submit" onclick="validateForm()">Create Account</button>
+
+      <p class="toggle-text">
+        Already have an account? <a href="#" onclick="showLogin()">Log In</a>
+      </p>
+    </form>
+
+    <!-- 🔹 Log In Form -->
+    <form action="#" class="form" id="loginForm">
+      <h1>Sign In</h1>
+
+      <div class="input-group">
+        <input type="email" placeholder=" Email (e.g. testdev@gmail.com)" required id="email2">
+        <input type="password" placeholder="Password" required  id="password2">
+      </div>
+
+      <div class="terms">
+        <input type="checkbox" id="remember" >
+        <label for="remember">Remember me</label>
+      </div>
+
+      <button type="submit" onclick="validateloginForm()">Log In</button>
+
+      <p class="toggle-text">
+        Don’t have an account? <a href="#" onclick="showSignup()">Sign Up</a>
+      </p>
+    </form>
+  </div>
+
+  <script src="./form.js"></script>
+</body>
+</html>

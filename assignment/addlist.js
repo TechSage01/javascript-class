@@ -7,6 +7,7 @@ function addName() {
 
   let inputName = nameInput.value.trim();
   let lowerName = inputName.toLowerCase();
+
   if (inputName === "") {
     message.textContent = "Please enter a name.";
     return;

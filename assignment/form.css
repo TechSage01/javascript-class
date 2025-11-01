@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+  background-color: rgb(231, 208, 176);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px 2px rgb(255, 255, 255);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form {
+  display: none;
+  flex-direction: column;
+}
+
+.form.active {
+  display: flex;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  text-align: center;
+  justify-content: center;
+}
+
+button {
+  width: 100%;
+  background-color: rgba(0, 0, 255, 0.85);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 255, 0.95);
+}
+
+.toggle-text {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.toggle-text a {
+  color: blue;
+  text-decoration: none;
+  font-weight: 500;
+}

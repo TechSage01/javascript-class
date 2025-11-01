@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="./quiz.css">
+</head>
+<body>
+  <div class="quiz">
+    <h1 class="app">Quiz Application</h1>
+    <p class="para" id="correctAnswer" style="font-weight: 600; font-size: 18px; color: black; color: green;"></p>
+    <p class="para" id="para" style="font-weight: 600; font-size: 18px; color: black;"></p>
+    <h1 class="h1" id="questionText">Who is your instructor?</h1>
+
+    <ul class="options" id="optionsContainer">
+      <li class="li"><input type="radio" name="answer" id="option1"><label for="selim">Mr Selim</label></li>
+      <li class="li"><input type="radio" name="answer" id="option2"><label for="dammy">Mr Dammy</label></li>
+      <li class="li"><input type="radio" name="answer" id="option3"><label for="yemi">Mr Yemi</label></li>
+      <li class="li"><input type="radio" name="answer" id="option4"><label for="timi">Mr Timi</label></li>
+    </ul>
+
+    <div class="button">
+      <button class="btn-1" onclick="prev()">Prev</button>
+      <button class="btn-2" onclick="next()">Next</button>
+    </div>
+    <button class="btn-3" onclick="submitQuiz()">Submit</button>
+  </div>
+
+  <script src="./quiz.js"></script>
+</body>
+</html>
