@@ -34,6 +34,9 @@ function validateForm() {
     if (password !== confirmPassword) {
         alert("Incorrect email and password.");
         // return false;
+    }else{
+        alert("Form submitted successfully!");
+        window.location.href = "./calculator.html";
     }
 
     const user = {
@@ -43,10 +46,6 @@ function validateForm() {
         password,
    };
    localStorage.setItem("user", JSON.stringify(user));
-
-    alert("Form submitted successfully!");
-    window.location.href = "./calculator.html";
-   
 }
 
 function validateloginForm() {
