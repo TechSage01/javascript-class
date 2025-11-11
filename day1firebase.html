@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Display</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+
+    #display {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      width: 230px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product-card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .product-card p {
+      color: #555;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .product-card .description {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div id="display">Loading products...</div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
+    import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyA5lWG47y2TZ66e900-X2k2jyiTIQXg75s",
+      authDomain: "november-nov.firebaseapp.com",
+      projectId: "november-nov",
+      storageBucket: "november-nov.firebasestorage.app",
+      messagingSenderId: "570792078331",
+      appId: "1:570792078331:web:c68a313927f2671e79f95e"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const colRef = collection(db, "products");
+
+    const productArray = [];
+    const getProducts = async () => {
+      try {
+        const res = await getDocs(colRef);
+        res.docs.forEach((doc) => {
+          productArray.push({ ...doc.data(), id: doc.id });
+        });
+        displayProducts(productArray);
+        console.log(productArray);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    getProducts();
+
+    function displayProducts(products) {
+      const displayDiv = document.getElementById("display");
+      displayDiv.innerHTML = "";
+      products.forEach((product) => {
+        displayDiv.innerHTML += `
+          <div class="product-card">
+            <a href="#">
+              <img 
+                src="${product.image || 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAYAAAA+5RSpAAA...'}" 
+                alt="${product.title}" />
+            </a>
+            <h3>${product.title}</h3>
+            <p>Price: $${product.price}</p>
+            <p class="description">${product.description || "No description available"}</p>
+          </div>
+        `;
+      }); 
+              // SECOND COLLECTION 
+
+      const colRef2 = collection(db, "blog");
+
+    const blogArray = [];
+    const getBlog = async () => {
+      try {
+        const res = await getDocs(colRef2);
+        res.docs.forEach((doc) => {
+          blogArray.push({ ...doc.data(), id: doc.id });
+        });
+        displayBlog(blogArray);
+        console.log(blogArray);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+    getBlog();
+    function displayBlog(blog) {
+      const displayDiv = document.getElementById("display");
+      blog.forEach((post) => {
+        displayDiv.innerHTML += `
+          <div class="product-card">
+            <a href="#">
+              <img 
+                 src="${post.image || 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAYAAAA+5RSpAAA...'}" 
+                alt="${post.title}" />
+            </a>
+            <h3>${post.title}</h3>
+            <p class="description">${post.description || "No content available"}</p>
+          </div>
+        `;
+      });
+    }
+  }
+  </script>
+</body>
+</html>
